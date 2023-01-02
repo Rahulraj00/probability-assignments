@@ -1,0 +1,73 @@
+\documentclass{article}
+% Language setting
+% Replace `english' with e.g. `spanish' to change the document language
+\usepackage[english]{babel}
+% Set page size and margins
+% Replace `letterpaper' with `a4paper' for UK/EU standard size
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+% Useful packages
+\usepackage{multicol}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[framemethod=tikz]{mdframed}
+\usepackage{array}
+\usepackage{blindtext}
+%\usepackage[paperwidth=10cm]{geometry}
+\usepackage{tkz-euclide}
+%\usepackage{tikz}
+\usetikzlibrary{
+  circuits.logic,
+  circuits.logic.US,
+  positioning
+}
+
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\providecommand{\norm}[1]{\left\lVert#1\right\rVert}
+\let\vec\mathbf
+\title{Probability Assignment-3}
+\author{Thoutu Rahul Raj}
+\begin{document}
+\maketitle
+\newtheorem{theorem}{Theorem}[section]
+\section*{\large Problem statement}
+An urn contains 5 red and 5 black balls. A ball is drawn at random, its colour is noted and is returned to the urn. Moreover, 2 additional balls of the colour drawn are put in the urn and then a ball is drawn at random. What is the probability that the second ball is red?
+\section*{\large Solution}
+Black balls = 5\\
+Red balls = 5\\
+Total balls = 10\\
+\textbf{CASE 1:}\\
+Let red ball be drawn in  first attempt.\\
+\begin{equation}
+\vec P(drawing\, red\, ball)=\frac{5}{10}=\frac{1}{2}\\
+\end{equation}
+Now two red balls are added in urn .\\
+Now  red balls = 7, black balls = 5\\
+Total balls = 12\\
+\begin{equation}
+\vec P(drawing\, red\, ball)=\frac{7}{12}\\
+\end{equation}
+\textbf{CASE 2}\\ 
+Let black ball be drawn in  first attempt.\\
+\begin{equation}
+\vec P(drawing\, black\, ball)=\frac{5}{10}=\frac{1}{2}\\
+\end{equation}
+Now two black balls are added in urn .\\
+Now  red balls = 5, black balls = 7\\
+Total balls = 12\\
+\begin{equation}
+\vec P(drawing\, red\, ball)=\frac{5}{12}\\
+\end{equation}
+the probability that the second ball is red \\
+
+\begin{equation}
+=\frac{1}{2}\times \frac{7}{12}+\frac{1}{2}\times \frac{5}{12}
+\end{equation}
+\begin{equation}
+= \frac{7}{24}+ \frac{5}{24}
+\end{equation}
+\begin{equation}
+= \frac{12}{24}=\frac{1}{2}
+\end{equation}
+\end{document}
